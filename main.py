@@ -24,12 +24,12 @@ def displayText(text):
 	pygame.display.update()
 	time.sleep(0.25)
 
-def revealCountry(color):
+def revealCountry(countryColor, newColor):
 	for x in range(canvasWidth):
 		for y in range(canvasHeight):
 			pixelColor = canvas.get_at((x, y))
-			if((pixelColor[0] == color[0]) and (pixelColor[1] == color[1]) and pixelColor[2] == color[2]):
-				canvas.set_at((x, y), colors["BLACK"])
+			if((pixelColor[0] == countryColor[0]) and (pixelColor[1] == countryColor[1]) and pixelColor[2] == countryColor[2]):
+				canvas.set_at((x, y), newColor)
 
 def gameLoop():
 	canvas.blit(background, (0,0))
@@ -47,6 +47,7 @@ def gameLoop():
 		displayText("Click on {}".format(worldCountries[i]))
 
 		validInput = False
+		numAttempts = 0
 		while(validInput == False):
 			#run until pressed skip or guessed the correct country
 			for event in pygame.event.get():
@@ -59,20 +60,26 @@ def gameLoop():
 					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
 						displayText("skipping...")
 						validInput = True
-						color = key[country]
-						revealCountry(color)
+						countryColor = key[country]
+						revealCountry(countryColor, colors["RED"])
 					else:
 						#find the pixel color value at that location
-						color = canvas.get_at(pos)
+						countryColor = canvas.get_at(pos)
 						#print(color)
 
-						if(color == key[country]):
+						if(countryColor == key[country]):
 							displayText("Correct!")
 							validInput = True
-							revealCountry(color)
+							if(numAttempts == 0):
+								revealCountry(countryColor, colors["GREEN"])
+							elif(numAttempts == 1):
+								revealCountry(countryColor, colors["YELLOW"])
+							else:
+								revealCountry(countryColor, colors["RED"])
 						else:
 							displayText("Wrong!")
 							displayText("Try again, click on {}".format(worldCountries[i]))
+							numAttempts += 1
 	exit(0)
 
 def main():
