@@ -22,7 +22,14 @@ def displayText(text):
 	textsurface = myfont.render(text, False, colors["BLACK"])
 	canvas.blit(textsurface, textPos)
 	pygame.display.update()
-	time.sleep(1)
+	time.sleep(0.25)
+
+def revealCountry(color):
+	for x in range(canvasWidth):
+		for y in range(canvasHeight):
+			pixelColor = canvas.get_at((x, y))
+			if((pixelColor[0] == color[0]) and (pixelColor[1] == color[1]) and pixelColor[2] == color[2]):
+				canvas.set_at((x, y), colors["BLACK"])
 
 def gameLoop():
 	canvas.blit(background, (0,0))
@@ -51,8 +58,9 @@ def gameLoop():
 					#First check if we pressed the skip button
 					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
 						displayText("pressed skip")
-						#validInput = True
 						validInput = True
+						color = key[country]
+						revealCountry(color)
 					else:
 						#find the pixel color value at that location
 						color = canvas.get_at(pos)
@@ -61,6 +69,7 @@ def gameLoop():
 						if(color == key[country]):
 							displayText("Correct!")
 							validInput = True
+							revealCountry(color)
 						else:
 							displayText("Wrong!")
 							displayText("Try again, click on {}".format(worldCountries[i]))
