@@ -1,1 +1,1 @@
-worldCountries = ["USA", "Algeria", "Australia", "Bolivia", "Botswana", "Canada", "China", "Germany", "Ghana", "Madagascar", "Mexico", "Oman", "Peru", "Romania", "Sudan", "Turkey", "Uruguay", "Venezuela"]
+worldCountries = ["USA", "Algeria", "Australia", "Bolivia", "Botswana", "Canada", "Chad", "China", "Ecuador", "Germany", "Ghana", "Greece", "Guyana", "India", "Iran", "Madagascar", "Mexico", "Nigeria", "New Zealand", "Oman", "Papua New Guinea", "Peru", "Poland", "Romania", "Russia", "South Africa", "Spain", "Sudan", "Turkey", "Uruguay", "Venezuela", "Vietnam", "Yemen"]

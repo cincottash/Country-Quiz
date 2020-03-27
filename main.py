@@ -61,7 +61,7 @@ def gameLoop():
 						displayText("skipping...")
 						validInput = True
 						countryColor = key[country]
-						revealCountry(countryColor, colors["RED"])
+						revealCountry(countryColor, colors["BLACK"])
 					else:
 						#find the pixel color value at that location
 						countryColor = canvas.get_at(pos)
@@ -77,7 +77,6 @@ def gameLoop():
 							else:
 								revealCountry(countryColor, colors["RED"])
 						else:
-							displayText("Wrong!")
 							displayText("Try again, click on {}".format(worldCountries[i]))
 							numAttempts += 1
 	exit(0)
