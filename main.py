@@ -57,7 +57,7 @@ def gameLoop():
 					
 					#First check if we pressed the skip button
 					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
-						displayText("pressed skip")
+						displayText("skipping...")
 						validInput = True
 						color = key[country]
 						revealCountry(color)
