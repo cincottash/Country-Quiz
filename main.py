@@ -61,26 +61,24 @@ def gameLoop():
 					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
 						displayText("skipping...")
 						validInput = True
-						countryColor = key[country]
-						revealCountry(countryColor, colors["BLACK"])
+						correctCountryColor = key[country]
+						revealCountry(correctCountryColor, colors["BLACK"])
 					else:
 						#find the pixel color value at that location
-						countryColor = canvas.get_at(pos)
+						selectedCountryColor = canvas.get_at(pos)
 						#print(color)
 
-						if(countryColor == key[country]):
+						if(selectedCountryColor == key[country]):
 							displayText("Correct!")
 							validInput = True
 							if(numAttempts == 0):
-								revealCountry(countryColor, colors["GREEN"])
+								revealCountry(selectedCountryColor, colors["GREEN"])
 							elif(numAttempts == 1):
-								revealCountry(countryColor, colors["YELLOW"])
+								revealCountry(selectedCountryColor, colors["YELLOW"])
 							else:
-								revealCountry(countryColor, colors["RED"])
+								revealCountry(selectedCountryColor, colors["RED"])
 						else:
-							for country in worldCountries:
-								if key[country] == countryColor:
-									displayText("That's {},  try again, click on {}".format((country), worldCountriesShuffled[i]))
+							displayText("Try again, click on {}".format(worldCountriesShuffled[i]))
 							numAttempts += 1
 	exit(0)
 
