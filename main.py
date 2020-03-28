@@ -34,8 +34,7 @@ def gameLoop():
 				if event.type == pygame.MOUSEBUTTONUP:
 					#getting pos of the mouse when its clicked
 					pos = pygame.mouse.get_pos()
-					#print(pos)
-					
+
 					#First check if we pressed the skip button
 					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
 						displayText("skipping...")
