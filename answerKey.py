@@ -5,6 +5,7 @@ key = {
 	"Algeria": (79, 132, 205),
 	"Angola": (133, 88, 215),
 	"Argentina": (207, 77, 162),
+	"Armenia": (82, 36, 145),
 	"Australia": (81, 132, 205),
 	"Bangladesh": (138, 16, 138),
 	"Belarus": (185, 113, 41),
@@ -24,6 +25,7 @@ key = {
 	"Colombia": (169, 113, 41),
 	"Costa Rica": (140, 52, 43),
 	"Cote d'lvoire": (140, 52, 46),
+	"Croatia": (82, 36, 146)
 	"Cuba": (130, 88, 215),
 	"Czechia": (140, 88, 215),
 	"Democratic Republic of the Congo": (134, 16, 138),
@@ -39,6 +41,7 @@ key = {
 	"Finland": (126, 88, 215),
 	"France": (123, 88, 215),
 	"French Guiana": (120, 88, 215),
+	"Gabon": (82, 36, 141)
 	"Germany": (83, 132, 205),
 	"Georgia": (140, 52, 56),
 	"Ghana": (90, 132, 205),
@@ -46,6 +49,7 @@ key = {
 	"Greenland": (160, 113, 41),
 	"Guatemala": (137, 16, 138),
 	"Guyana": (217, 77, 162),
+	"Haiti": (82, 36, 143),
 	"Honduras": (140, 52, 27),
 	"Hungary": (140, 52, 47),
 	"Iceland": (131, 16, 138),
@@ -62,6 +66,7 @@ key = {
 	"Kuwait": (140, 52, 48),
 	"Kyrgyzstan": (140, 52, 36),
 	"Laos": (178, 113, 41),
+	"Latvia": (82, 36, 144)
 	"Lesotho": (140, 52, 34),
 	"Liberia": (172, 113, 41),
 	"Libya": (168, 113, 41),
@@ -128,5 +133,6 @@ key = {
 	"Vietnam": (220, 77, 162),
 	"Western Sahara": (177, 113, 41),
 	"Yemen": (210, 77, 162),
+	"Zambia": (82, 36, 140)
 
 }
