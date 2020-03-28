@@ -69,7 +69,7 @@ key = {
 	"Pakistan": (123, 16, 138),
 	"Papua New Guinea": (215, 77, 162),
 	"Paraguay": (182, 113, 41),
-	"Peru": (118, 88, 215)
+	"Peru": (118, 88, 215),
 	"Poland": (219, 77, 162),
 	"Portugal": (163, 113, 41),
 	"Puerto Rico": (183, 113, 41),
