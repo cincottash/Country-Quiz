@@ -20,7 +20,7 @@ key = {
 	"Botswana": (80, 132, 205),
 	"Brazil": (120, 16, 138),
 	"Burkina Faso": (82, 36, 149),
-	"Burundi": (82, 36, 154)
+	"Burundi": (82, 36, 154),
 	"Bulgaria": (179, 113, 41),
 	"Cameroon": (176, 113, 41),
 	"Cambodia": (125, 16, 138),
@@ -32,7 +32,7 @@ key = {
 	"Colombia": (169, 113, 41),
 	"Costa Rica": (140, 52, 43),
 	"Cote d'lvoire": (140, 52, 46),
-	"Croatia": (82, 36, 146)
+	"Croatia": (82, 36, 146),
 	"Cuba": (130, 88, 215),
 	"Cyprus": (82, 36, 160),
 	"Czechia": (140, 88, 215),
@@ -51,7 +51,7 @@ key = {
 	"Finland": (126, 88, 215),
 	"France": (123, 88, 215),
 	"French Guiana": (120, 88, 215),
-	"Gabon": (82, 36, 141)
+	"Gabon": (82, 36, 141),
 	"Germany": (83, 132, 205),
 	"Georgia": (140, 52, 56),
 	"Ghana": (90, 132, 205),
@@ -70,6 +70,7 @@ key = {
 	"Iraq": (124, 88, 215),
 	"Iran": (218, 77, 162),
 	"Ireland": (140, 52, 28),
+	"Israel": (232, 34, 99),
 	"Italy": (127, 16, 138),
 	"Jamaica": (140, 52, 58),
 	"Japan": (187, 113, 41),
@@ -139,7 +140,7 @@ key = {
 	"Switzerland": (140, 52, 35),
 	"Syria": (140, 52, 49),
 	"Taiwan": (181, 113, 41),
-	"Tajikistan": (82, 36, 152)
+	"Tajikistan": (82, 36, 152),
 	"Tanzania": (140, 52, 31),
 	"Thailand": (140, 52, 39),
 	"The Netherlands": (140, 52, 52),
