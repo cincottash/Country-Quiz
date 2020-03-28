@@ -3,6 +3,7 @@ from globals import *
 from answerKey import *
 from countries import *
 import time
+import random
 
 pygame.init()
 
@@ -40,11 +41,11 @@ def gameLoop():
 	canvas.blit(textsurface, (899, 953))
 	pygame.display.update()
 	
+	worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
 
-
-	for i,country in enumerate(worldCountries):
+	for i,country in enumerate(worldCountriesShuffled):
 		
-		displayText("Click on {}".format(worldCountries[i]))
+		displayText("Click on {}".format(worldCountriesShuffled[i]))
 
 		validInput = False
 		numAttempts = 0
@@ -77,7 +78,7 @@ def gameLoop():
 							else:
 								revealCountry(countryColor, colors["RED"])
 						else:
-							displayText("Try again, click on {}".format(worldCountries[i]))
+							displayText("Try again, click on {}".format(worldCountriesShuffled[i]))
 							numAttempts += 1
 	exit(0)
 
