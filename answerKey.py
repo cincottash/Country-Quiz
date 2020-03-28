@@ -4,6 +4,7 @@ key = {
 	"Argentina": (207, 77, 162),
 	"Australia": (81, 132, 205),
 	"Bangladesh": (138, 16, 138),
+	"Belarus": (185, 113, 41),
 	"Belize": (174, 113, 41),
 	"Bolivia": (84, 132, 205),
 	"Botswana": (80, 132, 205),
