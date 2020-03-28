@@ -78,7 +78,9 @@ def gameLoop():
 							else:
 								revealCountry(selectedCountryColor, colors["RED"])
 						else:
-							displayText("Try again, click on {}".format(worldCountriesShuffled[i]))
+							for possibleCountry in worldCountries:
+								if(key[possibleCountry] == selectedCountryColor):
+									displayText("That's {}, try again, click on {}".format(possibleCountry, worldCountriesShuffled[i]))
 							numAttempts += 1
 	exit(0)
 
