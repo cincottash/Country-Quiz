@@ -15,7 +15,7 @@ background = pygame.image.load("assets/world.png")
 canvas = pygame.display.set_mode((canvasWidth, canvasHeight))
 
 def clearText():
-	pygame.draw.rect(canvas, (182, 220, 243), (850, 919, 600, 30))
+	pygame.draw.rect(canvas, (182, 220, 243), (850, 919, 900, 30))
 
 def displayText(text):
 	clearText()
@@ -43,9 +43,9 @@ def gameLoop():
 	
 	worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
 
-	for i,country in enumerate(worldCountriesShuffled):
+	for country in worldCountriesShuffled:
 		
-		displayText("Click on {}".format(worldCountriesShuffled[i]))
+		displayText("Click on {}".format(country))
 
 		validInput = False
 		numAttempts = 0
@@ -80,7 +80,7 @@ def gameLoop():
 						else:
 							for possibleCountry in worldCountries:
 								if(key[possibleCountry] == selectedCountryColor):
-									displayText("That's {}, try again, click on {}".format(possibleCountry, worldCountriesShuffled[i]))
+									displayText("That's {}, try again, click on {}".format(possibleCountry, country))
 							numAttempts += 1
 	exit(0)
 
