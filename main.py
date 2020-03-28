@@ -1,18 +1,6 @@
-import pygame
-from globals import *
 from answerKey import *
-from countries import *
+from setup import *
 import time
-import random
-
-pygame.init()
-
-myfont = pygame.font.SysFont('Comic Sans MS', 30)
-
-#used to reset the screen after each update
-background = pygame.image.load("assets/world.png")
-
-canvas = pygame.display.set_mode((canvasWidth, canvasHeight))
 
 def clearText():
 	pygame.draw.rect(canvas, (182, 220, 243), (850, 919, 900, 30))
@@ -33,15 +21,6 @@ def revealCountry(countryColor, newColor):
 				canvas.set_at((x, y), newColor)
 
 def gameLoop():
-	canvas.blit(background, (0,0))
-	#skip button
-	pygame.draw.rect(canvas, colors["RED"],(895,919,50,60))
-	myfont = pygame.font.SysFont('Comic Sans MS', 30)
-	textsurface = myfont.render("Skip", False, colors["BLACK"])
-	canvas.blit(textsurface, (899, 953))
-	pygame.display.update()
-	
-	worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
 
 	for country in worldCountriesShuffled:
 		
