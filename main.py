@@ -34,17 +34,20 @@ def gameLoop():
 				if event.type == pygame.MOUSEBUTTONUP:
 					#getting pos of the mouse when its clicked
 					pos = pygame.mouse.get_pos()
-
+					selectedCountryColor = canvas.get_at(pos)
+					
 					#First check if we pressed the skip button
-					if((895 < pos[0] < 944) and (949 < pos[1] < 978)):
+					if(selectedCountryColor == colors["SKIP"]):
 						displayText("skipping...")
 						validInput = True
 						correctCountryColor = key[country]
 						revealCountry(correctCountryColor, colors["BLACK"])
+					elif(selectedCountryColor == colors["EXIT"]):
+						displayText("quitting...")
+						exit(0)
+					elif(selectedCountryColor == colors["RETRY"]):
+						main()
 					else:
-						#find the pixel color value at that location
-						selectedCountryColor = canvas.get_at(pos)
-						#print(color)
 
 						if(selectedCountryColor == key[country]):
 							displayText("Correct!")
