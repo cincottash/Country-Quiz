@@ -22,6 +22,8 @@ def revealCountry(countryColor, newColor):
 
 def gameLoop():
 
+	numCorrect = 0
+
 	for country in worldCountriesShuffled:
 		
 		displayText("Click on {}".format(country), colors["BLACK"])
@@ -50,10 +52,11 @@ def gameLoop():
 					else:
 
 						if(selectedCountryColor == key[country]):
-							displayText("Correct!")
+							displayText("Correct!", colors["BLACK"])
 							validInput = True
 							if(numAttempts == 0):
 								revealCountry(selectedCountryColor, colors["GREEN"])
+								numCorrect += 1
 							elif(numAttempts == 1):
 								revealCountry(selectedCountryColor, colors["YELLOW"])
 							else:
@@ -61,9 +64,21 @@ def gameLoop():
 						else:
 							for possibleCountry in worldCountries:
 								if(key[possibleCountry] == selectedCountryColor):
-									displayText("That's {}, try again, click on {}".format(possibleCountry, country))
+									displayText("That's {}, try again, click on {}".format(possibleCountry, country), colors["BLACK"])
 							numAttempts += 1
-	exit(0)
+	displayText("Game over!! You got {}/{} correct on the first try".format(numCorrect, len(worldCountries)), colors["BLACK"])
+	
+	validInput = False
+	while(validInput == False):
+		for event in pygame.event.get():
+				if event.type == pygame.MOUSEBUTTONUP:
+					#getting pos of the mouse when its clicked
+					pos = pygame.mouse.get_pos()
+					selectedCountryColor = canvas.get_at(pos)
+
+					if((selectedCountryColor == colors["EXIT"]) or (selectedCountryColor == colors["TEXTCOLOREXIT"])):
+						displayText("quitting...", colors["BLACK"])
+						exit(0)
 
 def main():
 	gameLoop()
