@@ -40,7 +40,7 @@ def gameLoop(worldCountriesShuffled, canvas):
 					
 					#First check if we pressed the skip button
 					if((selectedCountryColor == colors["SKIP"]) or (selectedCountryColor == colors["TEXTCOLORSKIP"])):
-						displayText("skipping...", colors["BLACK"], canvas)
+						displayText("Skipping...", colors["BLACK"], canvas)
 						validInput = True
 						correctCountryColor = key[country]
 						revealCountry(correctCountryColor, colors["BLACK"], canvas)
@@ -70,8 +70,8 @@ def gameLoop(worldCountriesShuffled, canvas):
 							numAttempts += 1
 	displayText("Game over!! You got {}/{} correct on the first try".format(numCorrect, len(worldCountries)), colors["BLACK"], canvas)
 	
-	validInput = False
-	while(validInput == False):
+	
+	while(True):
 		for event in pygame.event.get():
 				if event.type == pygame.MOUSEBUTTONUP:
 					#getting pos of the mouse when its clicked
