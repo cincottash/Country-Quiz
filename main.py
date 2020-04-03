@@ -65,6 +65,8 @@ def gameLoop():
 							for possibleCountry in worldCountries:
 								if(key[possibleCountry] == selectedCountryColor):
 									displayText("That's {}, try again, click on {}".format(possibleCountry, country), colors["BLACK"])
+							if((selectedCountryColor == colors["RED"]) or (selectedCountryColor == colors["GREEN"]) or (selectedCountryColor == colors["YELLOW"])):
+								displayText("You already clicked that country, try again, click on {}".format(country), colors["BLACK"])
 							numAttempts += 1
 	displayText("Game over!! You got {}/{} correct on the first try".format(numCorrect, len(worldCountries)), colors["BLACK"])
 	
