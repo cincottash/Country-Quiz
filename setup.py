@@ -3,40 +3,41 @@ from countries import *
 import pygame
 import random
 
-worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
+def setup():
+	worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
+	#used to reset the screen after each update
+	background = pygame.image.load("assets/world.png")
 
+	canvas = pygame.display.set_mode((canvasWidth, canvasHeight))
 
-#used to reset the screen after each update
-background = pygame.image.load("assets/world.png")
+	pygame.init()
+	canvas.blit(background, (0,0))
 
-canvas = pygame.display.set_mode((canvasWidth, canvasHeight))
+	#skip button
+	pygame.draw.rect(canvas, colors["SKIP"],(850,919,50,60))
 
-pygame.init()
-canvas.blit(background, (0,0))
+	myfont = pygame.font.SysFont('Comic Sans MS', 24)
+	textsurface = myfont.render("Skip", False, colors["TEXTCOLORSKIP"])
 
-#skip button
-pygame.draw.rect(canvas, colors["SKIP"],(850,919,50,60))
+	canvas.blit(textsurface, (859, 955))
 
-myfont = pygame.font.SysFont('Comic Sans MS', 24)
-textsurface = myfont.render("Skip", False, colors["TEXTCOLORSKIP"])
+	#Exit button
+	pygame.draw.rect(canvas, colors["EXIT"],(910,919,50,60))
 
-canvas.blit(textsurface, (859, 955))
+	myfont = pygame.font.SysFont('Comic Sans MS', 24)
+	textsurface = myfont.render("Exit", False, colors["TEXTCOLOREXIT"])
 
-#Exit button
-pygame.draw.rect(canvas, colors["EXIT"],(910,919,50,60))
+	canvas.blit(textsurface, (920, 955))
 
-myfont = pygame.font.SysFont('Comic Sans MS', 24)
-textsurface = myfont.render("Exit", False, colors["TEXTCOLOREXIT"])
+	#Replay button
+	pygame.draw.rect(canvas, colors["RETRY"],(970,919,50,60))
 
-canvas.blit(textsurface, (920, 955))
+	myfont = pygame.font.SysFont('Comic Sans MS', 24)
+	textsurface = myfont.render("Retry", False, colors["TEXTCOLORRETRY"])
 
-#Replay button
-pygame.draw.rect(canvas, colors["RETRY"],(970,919,50,60))
+	canvas.blit(textsurface, (973, 955))
 
-myfont = pygame.font.SysFont('Comic Sans MS', 24)
-textsurface = myfont.render("Retry", False, colors["TEXTCOLORRETRY"])
+	pygame.display.update()
 
-canvas.blit(textsurface, (973, 955))
-
-pygame.display.update()
+	return worldCountriesShuffled, canvas
 
