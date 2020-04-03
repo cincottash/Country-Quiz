@@ -36,36 +36,36 @@ def gameLoop(worldCountriesShuffled, canvas):
 				if event.type == pygame.MOUSEBUTTONUP:
 					#getting pos of the mouse when its clicked
 					pos = pygame.mouse.get_pos()
-					selectedCountryColor = canvas.get_at(pos)
+					selectedColor = canvas.get_at(pos)
 					
 					#First check if we pressed the skip button
-					if((selectedCountryColor == colors["SKIP"]) or (selectedCountryColor == colors["TEXTCOLORSKIP"])):
+					if((selectedColor == colors["SKIP"]) or (selectedColor == colors["TEXTCOLORSKIP"])):
 						displayText("Skipping...", colors["BLACK"], canvas)
 						validInput = True
 						correctCountryColor = key[country]
 						revealCountry(correctCountryColor, colors["BLACK"], canvas)
-					elif((selectedCountryColor == colors["EXIT"]) or (selectedCountryColor == colors["TEXTCOLOREXIT"])):
+					elif((selectedColor == colors["EXIT"]) or (selectedColor == colors["TEXTCOLOREXIT"])):
 						displayText("Quitting...", colors["BLACK"], canvas)
 						exit(0)
-					elif(selectedCountryColor == colors["RETRY"] or (selectedCountryColor == colors["TEXTCOLORRETRY"])):
+					elif(selectedColor == colors["RETRY"] or (selectedColor == colors["TEXTCOLORRETRY"])):
 						main()
 					else:
 
-						if(selectedCountryColor == key[country]):
+						if(selectedColor == key[country]):
 							displayText("Correct!", colors["BLACK"], canvas)
 							validInput = True
 							if(numAttempts == 0):
-								revealCountry(selectedCountryColor, colors["GREEN"], canvas)
+								revealCountry(selectedColor, colors["GREEN"], canvas)
 								numCorrect += 1
 							elif(numAttempts == 1):
-								revealCountry(selectedCountryColor, colors["YELLOW"], canvas)
+								revealCountry(selectedColor, colors["YELLOW"], canvas)
 							else:
-								revealCountry(selectedCountryColor, colors["RED"], canvas)
+								revealCountry(selectedColor, colors["RED"], canvas)
 						else:
 							for possibleCountry in worldCountries:
-								if(key[possibleCountry] == selectedCountryColor):
+								if(key[possibleCountry] == selectedColor):
 									displayText("That's {}, try again, click on {}".format(possibleCountry, country), colors["BLACK"], canvas)
-							if((selectedCountryColor == colors["RED"]) or (selectedCountryColor == colors["GREEN"]) or (selectedCountryColor == colors["YELLOW"])):
+							if((selectedColor == colors["RED"]) or (selectedColor == colors["GREEN"]) or (selectedColor == colors["YELLOW"])):
 								displayText("You already clicked that country, try again, click on {}".format(country), colors["BLACK"], canvas)
 							numAttempts += 1
 	displayText("Game over!! You got {}/{} correct on the first try".format(numCorrect, len(worldCountries)), colors["BLACK"], canvas)
@@ -76,12 +76,12 @@ def gameLoop(worldCountriesShuffled, canvas):
 				if event.type == pygame.MOUSEBUTTONUP:
 					#getting pos of the mouse when its clicked
 					pos = pygame.mouse.get_pos()
-					selectedCountryColor = canvas.get_at(pos)
+					selectedColor = canvas.get_at(pos)
 
-					if((selectedCountryColor == colors["EXIT"]) or (selectedCountryColor == colors["TEXTCOLOREXIT"])):
+					if((selectedColor == colors["EXIT"]) or (selectedColor == colors["TEXTCOLOREXIT"])):
 						displayText("quitting...", colors["BLACK"], canvas)
 						exit(0)
-					elif(selectedCountryColor == colors["RETRY"] or (selectedCountryColor == colors["TEXTCOLORRETRY"])):
+					elif(selectedColor == colors["RETRY"] or (selectedColor == colors["TEXTCOLORRETRY"])):
 						main()
 
 def main():
