@@ -31,12 +31,12 @@ textsurface = myfont.render("Exit", False, colors["TEXTCOLOREXIT"])
 canvas.blit(textsurface, (920, 955))
 
 #Replay button
-# pygame.draw.rect(canvas, colors["RETRY"],(970,919,50,60))
+pygame.draw.rect(canvas, colors["RETRY"],(970,919,50,60))
 
-# myfont = pygame.font.SysFont('Comic Sans MS', 24)
-# textsurface = myfont.render("Retry", False, colors["BLACK"])
+myfont = pygame.font.SysFont('Comic Sans MS', 24)
+textsurface = myfont.render("Retry", False, colors["TEXTCOLORRETRY"])
 
-# canvas.blit(textsurface, (973, 955))
+canvas.blit(textsurface, (973, 955))
 
 pygame.display.update()
 

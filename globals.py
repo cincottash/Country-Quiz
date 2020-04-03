@@ -13,5 +13,6 @@ colors = {
 	"RETRY": (0, 0, 254),
 	"TEXTCOLORSKIP": (0, 0, 1),
 	"TEXTCOLOREXIT": (0, 1, 0),
+	"TEXTCOLORRETRY": (1, 0, 0)
 
 }

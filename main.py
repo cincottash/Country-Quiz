@@ -47,8 +47,8 @@ def gameLoop():
 					elif((selectedCountryColor == colors["EXIT"]) or (selectedCountryColor == colors["TEXTCOLOREXIT"])):
 						displayText("quitting...", colors["BLACK"])
 						exit(0)
-					# elif(selectedCountryColor == colors["RETRY"] or):
-					# 	main()
+					elif(selectedCountryColor == colors["RETRY"] or (selectedCountryColor == colors["TEXTCOLORRETRY"])):
+						print("TODO: Implement retry button")
 					else:
 
 						if(selectedCountryColor == key[country]):
