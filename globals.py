@@ -10,5 +10,8 @@ colors = {
 	"YELLOW": (234, 228, 53),
 	"SKIP": (254, 0, 0),
 	"EXIT": (0, 254, 0),
-	"RETRY": (0, 0, 254)
+	"RETRY": (0, 0, 254),
+	"TEXTCOLORSKIP": (0, 0, 1),
+	"TEXTCOLOREXIT": (0, 1, 0),
+
 }

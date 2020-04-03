@@ -18,7 +18,7 @@ canvas.blit(background, (0,0))
 pygame.draw.rect(canvas, colors["SKIP"],(850,919,50,60))
 
 myfont = pygame.font.SysFont('Comic Sans MS', 24)
-textsurface = myfont.render("Skip", False, colors["BLACK"])
+textsurface = myfont.render("Skip", False, colors["TEXTCOLORSKIP"])
 
 canvas.blit(textsurface, (859, 955))
 
@@ -26,7 +26,7 @@ canvas.blit(textsurface, (859, 955))
 pygame.draw.rect(canvas, colors["EXIT"],(910,919,50,60))
 
 myfont = pygame.font.SysFont('Comic Sans MS', 24)
-textsurface = myfont.render("Exit", False, colors["BLACK"])
+textsurface = myfont.render("Exit", False, colors["TEXTCOLOREXIT"])
 
 canvas.blit(textsurface, (920, 955))
 

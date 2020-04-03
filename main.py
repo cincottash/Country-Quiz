@@ -5,10 +5,10 @@ import time
 def clearText():
 	pygame.draw.rect(canvas, (182, 220, 243), (850, 919, 900, 30))
 
-def displayText(text):
+def displayText(text, color):
 	clearText()
 	myfont = pygame.font.SysFont('Comic Sans MS', 30)
-	textsurface = myfont.render(text, False, colors["BLACK"])
+	textsurface = myfont.render(text, False, color)
 	canvas.blit(textsurface, textPos)
 	pygame.display.update()
 	time.sleep(0.25)
@@ -24,7 +24,7 @@ def gameLoop():
 
 	for country in worldCountriesShuffled:
 		
-		displayText("Click on {}".format(country))
+		displayText("Click on {}".format(country), colors["BLACK"])
 
 		validInput = False
 		numAttempts = 0
@@ -37,16 +37,16 @@ def gameLoop():
 					selectedCountryColor = canvas.get_at(pos)
 					
 					#First check if we pressed the skip button
-					if(selectedCountryColor == colors["SKIP"]):
-						displayText("skipping...")
+					if((selectedCountryColor == colors["SKIP"]) or (selectedCountryColor == colors["TEXTCOLORSKIP"])):
+						displayText("skipping...", colors["BLACK"])
 						validInput = True
 						correctCountryColor = key[country]
 						revealCountry(correctCountryColor, colors["BLACK"])
-					elif(selectedCountryColor == colors["EXIT"]):
-						displayText("quitting...")
+					elif((selectedCountryColor == colors["EXIT"]) or (selectedCountryColor == colors["TEXTCOLOREXIT"])):
+						displayText("quitting...", colors["BLACK"])
 						exit(0)
-					elif(selectedCountryColor == colors["RETRY"]):
-						main()
+					# elif(selectedCountryColor == colors["RETRY"] or):
+					# 	main()
 					else:
 
 						if(selectedCountryColor == key[country]):
