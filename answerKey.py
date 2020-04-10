@@ -147,6 +147,7 @@ key = {
 	"Togo": (140, 52, 59),
 	"Tunisia": (138, 88, 215),
 	"Turkey": (85, 132, 205),
+	"Turkmenistan": (237, 215, 129),
 	"Uganda": (82, 36, 148),
 	"Ukraine": (133, 16, 138),
 	"United Arab Emirates": (132, 88, 215),
@@ -157,6 +158,7 @@ key = {
 	"Vietnam": (220, 77, 162),
 	"Western Sahara": (177, 113, 41),
 	"Yemen": (210, 77, 162),
-	"Zambia": (82, 36, 140)
+	"Zambia": (82, 36, 140),
+	"Zimbabwe": (237, 215, 128)
 
 }
