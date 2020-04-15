@@ -27,7 +27,7 @@ A list of required libraries is located in requirments.txt and can be installed 
 
 
 ## Known Issues
-* No custom exception is thrown when program is ran with 0 arguments.
+
 
 ## Acknowledgments
 
