@@ -1,9 +1,20 @@
 # Country Quiz
 
-A tool to learn every country.
+A tool to learn the countries of the world.
 
 ## Features
 
+* Asks user to click on a random country.
+
+* Keeps track of score.
+
+* Ability to reset current game.
+
+* Ability to skip/reveal current country.
+
+* Country reveals name upon click.
+
+* Only included the cool countries.
 
 ## Prerequisites
 
@@ -24,10 +35,11 @@ A list of required libraries is located in requirments.txt and can be installed 
 
 
 ## Usage
-
+```python3 main.py```
 
 ## Known Issues
 
+* Clicking on a country after it was already asked fails to reveal the name.
 
 ## Acknowledgments
 
