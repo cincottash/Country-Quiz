@@ -1,4 +1,4 @@
-# Reddit Scraper
+# Country Quiz
 
 A tool to learn every country.
 
