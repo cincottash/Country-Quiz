@@ -6,7 +6,7 @@ import random
 def setup():
 	worldCountriesShuffled = random.sample(worldCountries, len(worldCountries))
 	#used to reset the screen after each update
-	background = pygame.image.load("assets/world.png")
+	background = pygame.image.load("world.png")
 
 	canvas = pygame.display.set_mode((canvasWidth, canvasHeight))
 
