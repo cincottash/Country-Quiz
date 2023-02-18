@@ -17,7 +17,7 @@ def revealCountry(countryColor, newColor, canvas):
 	for x in range(canvasWidth):
 		for y in range(canvasHeight):
 			pixelColor = canvas.get_at((x, y))
-			if((pixelColor[0] == countryColor[0]) and (pixelColor[1] == countryColor[1]) and pixelColor[2] == countryColor[2]):
+			if(pixelColor[0] == countryColor[0] and pixelColor[1] == countryColor[1] and pixelColor[2] == countryColor[2]):
 				canvas.set_at((x, y), newColor)
 
 def gameLoop(worldCountriesShuffled, canvas):
