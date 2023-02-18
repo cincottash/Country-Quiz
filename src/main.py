@@ -26,7 +26,7 @@ def gameLoop(worldCountriesShuffled, canvas):
 
 	for country in worldCountriesShuffled:
 		
-		displayText("Click on {}".format(country), colors["BLACK"], canvas)
+		displayText(f"Click on {country}", colors["BLACK"], canvas)
 
 		validInput = False
 		numAttempts = 0
@@ -64,11 +64,11 @@ def gameLoop(worldCountriesShuffled, canvas):
 						else:
 							for possibleCountry in worldCountries:
 								if(key[possibleCountry] == selectedColor):
-									displayText("That's {}, try again, click on {}".format(possibleCountry, country), colors["BLACK"], canvas)
-							if((selectedColor == colors["RED"]) or (selectedColor == colors["GREEN"]) or (selectedColor == colors["YELLOW"])):
-								displayText("You already clicked that country, try again, click on {}".format(country), colors["BLACK"], canvas)
+									displayText(f"That's {possibleCountry}, try again, click on {country}", colors["BLACK"], canvas)
+							if((selectedColor == colors["RED"]) or selectedColor == colors["GREEN"] or selectedColor == colors["YELLOW"]):
+								displayText(f"You already clicked that country, try again, click on {country}", colors["BLACK"], canvas)
 							numAttempts += 1
-	displayText("Game over!! You got {}/{} correct on the first try".format(numCorrect, len(worldCountries)), colors["BLACK"], canvas)
+	displayText(f"Game over!! You got {numCorrect}/{len(worldCountries)} correct on the first try", colors["BLACK"], canvas)
 	
 	
 	while(True):
