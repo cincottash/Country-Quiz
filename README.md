@@ -20,7 +20,7 @@ A tool to learn the countries of the world.
 
 A list of required libraries is located in requirments.txt and can be installed via Pip with 
 
-```pip install -r requirments.txt```
+```pip3 install -r requirments.txt```
 
 ## Built With
 
